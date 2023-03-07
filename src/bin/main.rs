@@ -1,7 +1,9 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")] // hide console window on Windows in release
 
+pub mod app;
+
 use eframe::egui;
-use rust_library_template::app::MyApp;
+use app::MyApp;
 
 fn main() -> Result<(), eframe::Error> {
 
