@@ -1,4 +1,4 @@
-pub mod module1;
+pub mod app;
 
 mod tests;
 
