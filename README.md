@@ -1,4 +1,4 @@
-# RustLibraryTemplate
+# RustLibraryTemplate for GUI applications
 Template library to develop using the Rust Lang
 
 ## Structure

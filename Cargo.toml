@@ -1,13 +1,13 @@
 [package]
 name = "rust_library_template"
-version = "0.1.0"
-authors = ["Name Surname <mail@mail.com>"]
+version = "1.0.1"
+authors = ["Foti Alberto <albertofots@gmail.com>"]
 edition = "2021"
 description = "A rust template for library development."
 readme = "README.md"
 repository = "https://github.com/.........."
 license = "MIT"
-keywords = ["keyword1", "keyword2", "keyword3", "keyword4"]
+keywords = ["gui", "framework", "imgui", "immediate"]
 
 [lib]
 name = "rust_library_template"
