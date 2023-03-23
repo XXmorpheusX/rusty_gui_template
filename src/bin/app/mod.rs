@@ -20,22 +20,23 @@ impl Default for MyApp {
 impl eframe::App for MyApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
+            // App title
+            RImGui::label(ui, "Title");
             RImGui::title(ui, "My first app");
+            RImGui::spacing(ui);
 
-            //RImGui::input_label_hor(ui, "Your name: ", &mut self.name);
+            // Input label vertical and horizontal
+            RImGui::label(ui, "Input label");
+            //RImGui::input_label_ver(ui, "Your name: ", &mut self.name);
+            RImGui::input_label_hor(ui, "Your name: ", &mut self.name);
 
-            ui.horizontal(|ui| {
-                let name_label = ui.label("Your name: ");
-                ui.text_edit_singleline(&mut self.name)
-                    .labelled_by(name_label.id);
-            });
-            //println!("{}", self.name);
-        
-            ui.add(egui::Slider::new(&mut self.age, 0..=120).text("age"));
-            if ui.button("Click each year").clicked() {
-                self.age += 1;
-            }
-            ui.label(format!("Hello '{}', age {}", self.name, self.age));
+            // Slider
+            RImGui::label(ui, "Slider");
+            RImGui::slider(ui, &mut self.age, 0..=120, "age");
+
+            // Button
+            RImGui::label(ui, "Button");
+            RImGui::button(ui, "Click each year", || { self.age += 1 });
         });
     }
 }

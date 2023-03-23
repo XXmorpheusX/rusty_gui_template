@@ -2,18 +2,12 @@
 
 pub mod app;
 
-use eframe::egui;
 use app::MyApp;
+use rust_library_template::RImGui;
 
 fn main() -> Result<(), eframe::Error> {
 
-    let options = eframe::NativeOptions {
-        initial_window_size: Some(egui::vec2(320.0, 240.0)),
-        ..Default::default()
-    };
-    eframe::run_native(
-        "My egui App",
-        options,
-        Box::new(|_cc| Box::new(MyApp::default())),
-    )
+    let app = RImGui::new(320.0, 240.0);
+
+    app.run_native("app_name", Box::new(MyApp::default()))
 }
